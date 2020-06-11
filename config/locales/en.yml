@@ -1,0 +1,68 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  Português: Português
+  Inglês: English
+  date:
+    formats:
+      date_month_year_concise: '%m.%d.%y'
+  tg: Thiago Linch
+  hello: "Hello world"
+  actual_locale: "English"
+  Olá! bem vindo a sua carteira online!: "Hi! Wellcome to your Online Wallet!"
+  app_name: Crypto Wallet
+  Coins: Coins
+  language: Current Language
+  # Padrão//Coin
+  Description: "Description"
+  Acronym: "Acronym"
+  Show: "Show"
+  Edit: "Edit"
+  Destroy: "Destroy"
+  Mining Types: "Mining Type"
+  Back: "Back"
+  Home: "Home"
+  Update Coin: "Update Coin"
+  New Coin: "New Coin"
+  Are you sure?: "Are you sure?"
+  Mining: "Mining"
+  Create: "Criar"
+  Coin was successfully created: "A moeda foi criada com sucesso!"
+  Coin was successfully updated: "Moeda atualizada com sucesso!"
+  Coin was successfully destroyed: "Moeda excluida com sucesso!"
+  Editing Coin: "Editing Coin"
+  
+  # Only Mining Type Page
+  Mining Type: Mining Type
+  New Mining Type: "New Mining Type"
+  # Tradução Rodapé
+  Todos os direitos reservados: "All rights reserved"

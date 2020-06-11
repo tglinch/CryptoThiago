@@ -1,0 +1,47 @@
+"pt-BR":
+  Português: Português
+  Inglês: Inglês
+  date:
+    formats:
+      date_month_year_concise: '%d.%m.%y'
+  tg: Thiago Linch
+  current_locale: "Português do Brasil"
+  actual_locale: "Português do Brasil"
+  hello: "Hello world"
+  Olá! bem vindo a sua carteira online!: "Olá! bem vindo a sua carteira online!"
+  Coins: Moedas
+  app_name: Carteira Virutal
+  language: Idioma Atual
+  # Coins Page
+  description: "Moeda"
+  Description: "Moeda"
+  Acronym: "Sigla"
+  Show: "Mostrar"
+  Edit: "Editar"
+  Destroy: "Excluir"
+  Mining Types: "Tipos de Mineração"
+  mining type: "Tipo de Mineração"
+  Mining Type: "Tipo de Mineração"
+  Back: "Voltar"
+  Home: "Início"
+  Update: "Atualizar"
+  Update coin: "Atualizar Moeda"
+  Update Mining Type: "Atualizar"
+  New Coin: "Nova Moeda"
+  Are you sure?: "Você tem certeza?"
+  Mining: "Mineração"
+  Create: "Criar"
+  Coin was successfully created: "A moeda foi criada com sucesso!"
+  Coin was successfully updated: "Moeda atualizada com sucesso!"
+  Coin was successfully destroyed: "Moeda excluida com sucesso!"
+  Editing Coin: "Editando Moeda"
+  Proof of Work: "Prova de trabalho"
+  Proof of Stake: "Prova de ..."
+  Proof of Capacity: "Prova de Capacidade"
+  
+  # Mining Type Page
+  New Mining Type: "Novo tipo de mineração"
+  
+  # Tradução do Model
+  # Tradução Rodapé
+  Todos os direitos reservados: "Todos os direitos reservados"

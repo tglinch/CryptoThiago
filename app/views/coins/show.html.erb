@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= I18n.t('Description') %>:</strong>
+  <%= @coin.description %>
+</p>
+
+<p>
+  <strong><%= I18n.t('Acronym') %>:</strong>
+  <%= @coin.acronym %>
+</p>
+
+<p>
+  <strong><%= I18n.t('Mining Types') %>:</strong>
+  <%= @coin.mining_type.acronym %>
+</p>
+
+<p>
+  <strong>Logo:</strong><br>
+  <%= image_tag @coin.url_image, size:"60x60" %>
+</p>
+
+<%= link_to I18n.t('Edit'), edit_coin_path(@coin) %> |
+<%= link_to I18n.t('Back'), coins_path %>

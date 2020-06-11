@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crypto Wallet</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag params[:controller], 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body style="background-color: white">
+  
+    <head style="display:flex">
+         <h1 id='logo'><%= I18n.t('app_name') %></h1>
+         
+         <div id='menu'> 
+             <%= link_to I18n.t("Home"), coins_path %>
+             <%= link_to I18n.t("Mining Types"), mining_types_path %>
+         
+         </div>
+         
+     </head>
+   
+    
+    <div class="container-fluid" style="background-color:white; width: 100%;">
+        <%= yield %>
+    </div>
+    
+  </body>
+  
+</html>

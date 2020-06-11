@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+<link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" type="text/css">
+
+
+<section style="padding:15px;">
+
+  <div id='head-coin'>
+     <h1 style='color: yellow; size: 30px;'><%= I18n.t('Coins') %></h1>
+      <p style='margin-top: -7px;'><%= l Date.today, format: :date_month_year_concise %></p>
+      <%#= cookies[:name]%>
+      <p><%#= cookies[:login] %> </p>
+      <%#= JSON.generate(cookies[:lat_lon]) %>
+      <p><%#= session[:curso] %> </p>  
+  </div>
+   
+    
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t('Description') %></th>
+      <th><%=I18n.t('Acronym')%></th>
+      <th>Logo</th>
+      <th> <%=I18n.t('Mining')%> </th>
+      <th style='width:10px; background-color: white'></th>
+    </tr>
+  </thead>
+
+      <tbody>
+        <% @coins.each do |coin| %>
+          <tr style='margin-top: 10px'>
+            <td><%= link_to coin.description, coin %></td>
+            <td><%= coin.acronym %></td>
+            <td><%= image_tag coin.url_image, size:"25x25" %></td>
+            <td><%= coin.mining_type.acronym %></td>
+            <td id='destroy'><%= link_to 'X', coin, method: :delete, data: { confirm: I18n.t('Are you sure?') } %></td>
+          </tr>
+      <% end %>
+      </tbody>
+</table>
+
+    <br>
+
+    <%= link_to I18n.t('New Coin'), new_coin_path %>
+    
+    
+    <footer>
+        <p><strong><%= I18n.t('language') %>: <%= I18n.t('actual_locale') %></strong></p>
+        <p>
+          <%= link_to 'Português', coins_path(locale: 'pt-BR') %>
+          ||
+          <%= link_to 'Inglês', coins_path(locale: :en) %>
+        </p>
+    
+    </footer>
+  
+</section>

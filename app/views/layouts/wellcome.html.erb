@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Crypto Wallet</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body style="background-color: white">
+     
+     
+    
+    <div class="container-fluid" style="background-color:white; width: 100%">
+        <%= yield %>
+    </div>
+    
+    <footer>
+        <p><%= I18n.t('Todos os direitos reservados')%> - <%= Date.today.year %> <%=  I18n.t('tg') %></p>
+    </footer>
+    
+  </body>
+</html>

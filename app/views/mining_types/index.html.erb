@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<section style="padding:15px; background-color:#B0C4DE" >
+        <h1>Mining Types</h1>
+        <p>Olá <%= @nome%>, bem vindo a sua carteira online!</p>
+        <p><strong><%= l Date.today,  format: :date_month_year_concise%></strong></p>
+        
+
+  <table>
+      <thead>
+        <tr>
+          <th><%= I18n.t('Mining Type') %></th>
+          <th><%= I18n.t('Acronym') %></th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @mining_types.each do |mining_type| %>
+          <tr>
+            <td><%= mining_type.description %></td>
+            <td><%= mining_type.acronym %></td>
+            <td><%= link_to I18n.t('Show'), mining_type %></td>
+            <td><%= link_to I18n.t('Edit'), edit_mining_type_path(mining_type) %></td>
+            <td><%= link_to I18n.t('Destroy'), mining_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+  </table>
+
+<br>
+
+<%= link_to I18n.t('New Mining Type'), new_mining_type_path %>
+
+  
+  
+</section>
