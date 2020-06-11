@@ -28,3 +28,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Meu codigo git hub:
+# git remote add origin https://github.com/tglinch/CryptoThiago.git
+# git push -u origin master
