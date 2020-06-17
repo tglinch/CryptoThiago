@@ -12,6 +12,7 @@
  *
  
  *= require_self
+ *= require bootstrap/dist/css/bootstrap
  */
 a{
     font-family: lato;
@@ -40,10 +41,13 @@ a{
     background-color:black;
     }
     
+    
+tbody{
+    display: flex;
+    }
+    
 footer{
-    background-color: blue;
-    display: grid;
-    color:white;
+    background-color: white;
+    display: line;
     text-align: center;
-    border-radius: 10px;
     }

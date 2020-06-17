@@ -5,7 +5,7 @@
 <section style="padding:15px;">
 
   <div id='head-coin'>
-     <h1 style='color: yellow; size: 30px;'><%= I18n.t('Coins') %></h1>
+    <h1><%= Coin.model_name.human(count: @coins.count) %></h1>
       <p style='margin-top: -7px;'><%= l Date.today, format: :date_month_year_concise %></p>
       <%#= cookies[:name]%>
       <p><%#= cookies[:login] %> </p>
@@ -14,43 +14,45 @@
   </div>
    
     
+<section style="display: flex; width: 100%; height: 500px; background-color: black">
+      <% @coins.each do |coin| %>
+      
+        <div class="card" style="width: 18rem; border-radius: 20px; border: none;">
+          <%= image_tag coin.url_image, class:"card-img-top"%>
+          <div class="card-body">
+            <h5 class="card-title"><%= coin.description %></h5>
+            <p class="card-text"><%= coin.acronym %></p>
+            <p class="card-text"><%= coin.mining_type.acronym%></p>
+            <%= link_to t("Editar"), edit_coin_path(coin),  class:"btn btn-primary" %>
+          </div>
+        </div>
+        
+            <%#= link_to 'X', coin, method: :delete, data: { confirm: I18n.t('Are you sure?') } %>
+      <%end%>
 
-<table>
-  <thead>
-    <tr>
-      <th><%= t('Description') %></th>
-      <th><%=I18n.t('Acronym')%></th>
-      <th>Logo</th>
-      <th> <%=I18n.t('Mining')%> </th>
-      <th style='width:10px; background-color: white'></th>
-    </tr>
-  </thead>
+</section>
 
-      <tbody>
-        <% @coins.each do |coin| %>
-          <tr style='margin-top: 10px'>
-            <td><%= link_to coin.description, coin %></td>
-            <td><%= coin.acronym %></td>
-            <td><%= image_tag coin.url_image, size:"25x25" %></td>
-            <td><%= coin.mining_type.acronym %></td>
-            <td id='destroy'><%= link_to 'X', coin, method: :delete, data: { confirm: I18n.t('Are you sure?') } %></td>
-          </tr>
-      <% end %>
-      </tbody>
-</table>
 
     <br>
 
-    <%= link_to I18n.t('New Coin'), new_coin_path %>
+    <%= link_to I18n.t('New Coin'), new_coin_path, class: "btn btn-primary btn-lg btn-block" %>
+    
+   
     
     
     <footer>
-        <p><strong><%= I18n.t('language') %>: <%= I18n.t('actual_locale') %></strong></p>
-        <p>
-          <%= link_to 'Português', coins_path(locale: 'pt-BR') %>
-          ||
-          <%= link_to 'Inglês', coins_path(locale: :en) %>
-        </p>
+        
+         <div class="container-fluid">
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <%= link_to 'Português', coins_path(locale: 'pt-BR'), class:"nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'English', coins_path(locale: 'en'), class:"nav-link" %>
+            </li>
+          </ul>
+          <%= yield %>
+          </div>
     
     </footer>
   

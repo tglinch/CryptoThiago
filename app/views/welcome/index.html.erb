@@ -1,10 +1,23 @@
-<div class="jumbotron" style="padding:10px; width:100%; display:fluid; margin-bottom:-10px; margin-left:-15px ;background-color:#ADD8E6">
-  <h1 class="display-4" style="margin-bottom:-5px;">Cripto Wallet</h1>
-  <p class="lead" style=" font-size:17px">Sua carteira virtual</p>
-  <hr class="my-4">
-  <p>A carteira virtual que vai mudar o jeito de fazer pagamentos, trasnferências e negócios.</p>
-  <%= render "menu" %>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"><%= I18n.t("app_name")%></h1>
+    <p class="lead"><%= I18n.t("Olá!") %></p>
+    <%= render "menu" %>
+  </div>
 </div>
 
+<div class="container-fluid">
+<ul class="nav justify-content-end">
+<li class="nav-item">
+<%= link_to 'Português', root_path(locale: 'pt-BR'),
+class:"nav-link" %>
+</li>
+<li class="nav-item">
+<%= link_to 'English', root_path(locale: 'en'), class:"nav-link"
+%>
+</li>
+</ul>
+<%= yield %>
+</div>
 <%# Esse comando abixo, é do botão do bootstrap%>
 <%#<a class="btn btn-primary btn-lg" href="coins#index" role="button">Entrar</a>%>

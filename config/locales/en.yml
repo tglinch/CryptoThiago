@@ -38,10 +38,11 @@ en:
   tg: Thiago Linch
   hello: "Hello world"
   actual_locale: "English"
-  Olá! bem vindo a sua carteira online!: "Hi! Wellcome to your Online Wallet!"
+  Olá!: "Hi! Wellcome to your Online Wallet!"
   app_name: Crypto Wallet
   Coins: Coins
   language: Current Language
+  Entrar: Enter
   # Padrão//Coin
   Description: "Description"
   Acronym: "Acronym"

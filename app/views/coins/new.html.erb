@@ -1,5 +1,5 @@
-<h1><%= I18n.t('New Coin') %></h1>
+<h3><%= I18n.t('New Coin') %></h3>
 
 <%= render 'form', coin: @coin %>
 
-<%= link_to I18n.t('Back'), coins_path %>
+<%= link_to I18n.t('Back'), coins_path, class:"btn btn-link" %>

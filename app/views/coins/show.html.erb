@@ -1,24 +1,12 @@
 <p id="notice"><%= notice %></p>
+<%= link_to I18n.t('Back'), coins_path, class:"btn btn-link" %>
 
-<p>
-  <strong><%= I18n.t('Description') %>:</strong>
-  <%= @coin.description %>
-</p>
-
-<p>
-  <strong><%= I18n.t('Acronym') %>:</strong>
-  <%= @coin.acronym %>
-</p>
-
-<p>
-  <strong><%= I18n.t('Mining Types') %>:</strong>
-  <%= @coin.mining_type.acronym %>
-</p>
-
-<p>
-  <strong>Logo:</strong><br>
-  <%= image_tag @coin.url_image, size:"60x60" %>
-</p>
-
-<%= link_to I18n.t('Edit'), edit_coin_path(@coin) %> |
-<%= link_to I18n.t('Back'), coins_path %>
+<div class="card" style="width: 18rem; margin: auto; border-radius: 20px; border: none; background-color: #778899">
+  <%= image_tag @coin.url_image, class:"card-img-top"%>
+  <div class="card-body">
+    <h5 class="card-title"><%= @coin.description %></h5>
+    <p class="card-text"><%= @coin.acronym %></p>
+    <p class="card-text"><%= @coin.mining_type.acronym%></p>
+    <%= link_to t("Editar"), edit_coin_path,  class:"btn btn-primary" %>
+  </div>
+</div>

@@ -8,10 +8,11 @@
   current_locale: "Português do Brasil"
   actual_locale: "Português do Brasil"
   hello: "Hello world"
-  Olá! bem vindo a sua carteira online!: "Olá! bem vindo a sua carteira online!"
+  Olá!: "Olá! bem vindo a sua carteira online!"
   Coins: Moedas
   app_name: Carteira Virutal
   language: Idioma Atual
+  Entrar: Entrar
   # Coins Page
   description: "Moeda"
   Description: "Moeda"

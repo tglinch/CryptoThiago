@@ -1,12 +1,22 @@
 <p id="notice"><%= notice %></p>
-<section style="padding:15px; background-color:#B0C4DE" >
-        <h1>Mining Types</h1>
-        <p>Olá <%= @nome%>, bem vindo a sua carteira online!</p>
+
+<section style="padding:15px; background-color:#fff" >
+      <head style="display:flex">
+         <h1 id='logo'><%= I18n.t('app_name') %></h1>
+         
+         <div id='menu'> 
+             <%= link_to I18n.t("Home"), coins_path %>
+             <%= link_to I18n.t("Mining Types"), mining_types_path %>
+         
+         </div>
+         
+     </head>
+       <h3><%= MiningType.model_name.human(count: @mining_types.count)%></h1>
         <p><strong><%= l Date.today,  format: :date_month_year_concise%></strong></p>
         
 
-  <table>
-      <thead>
+  <table class="table">
+      <thead class="thead-light">
         <tr>
           <th><%= I18n.t('Mining Type') %></th>
           <th><%= I18n.t('Acronym') %></th>
@@ -29,7 +39,7 @@
 
 <br>
 
-<%= link_to I18n.t('New Mining Type'), new_mining_type_path %>
+<%= link_to I18n.t('New Mining Type'), new_mining_type_path, class: "btn btn-primary" %>
 
   
   
